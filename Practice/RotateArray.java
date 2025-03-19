@@ -3,7 +3,7 @@
 
 import java.util.Arrays;
 
-class RotateArray {
+class GfG {
     
     // Function to left rotate array by d positions
     static void rotateArr(int[] arr, int d) {
