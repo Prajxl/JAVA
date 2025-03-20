@@ -1,19 +1,22 @@
-package javaInter;
-class SuperAcessParent {
-  String name ="Prajwal"; 
-}
-class child extends SuperAcessParent{
-  String name = "Nandan";
-  void showNames(){
-    System.out.println(name);
-    System.out.println(super.name);
+class Parent {
+  void display() {
+      System.out.println("Display from Parent");
   }
 }
+
+class Child extends Parent {
+  void display() {
+      System.out.println("Display from Child");
+  }
+
+  void show() {
+      super.display(); // Calls Parent's display()
+  }
+}
+
 public class Main {
   public static void main(String[] args) {
-      child obj = new child();
-      obj.showNames();
+      Child obj = new Child();
+      obj.show();
   }
 }
-
-
