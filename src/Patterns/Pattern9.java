@@ -1,8 +1,8 @@
 package Patterns;
 
-public class Pattern8 {
+public class Pattern9 {
     public void starpyramid(int n){
-        for (int i = 1; i <= n; i++) {
+        for (int i = n; i >= 0; i--) {
             for (int space = n-i ; space>0 ; space--) {
                 System.out.print(" ");
             }
@@ -14,8 +14,7 @@ public class Pattern8 {
     }
 
     public static void main(String[] args) {
-        Pattern8 p8 = new Pattern8();
-        p8.starpyramid(5);
+        Pattern9 p9 = new Pattern9();
+        p9.starpyramid(5);
     }
-
 }
