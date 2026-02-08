@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JAVABASICS.iml" filepath="$PROJECT_DIR$/JAVABASICS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA_DSA_SDE.iml" filepath="$PROJECT_DIR$/JAVA_DSA_SDE.iml" />
     </modules>
   </component>
 </project>
