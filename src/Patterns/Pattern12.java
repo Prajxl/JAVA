@@ -6,10 +6,10 @@ public class Pattern12 {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
-            for (int space = 1; space > 0; space--) {
+            for (int space = 1; space<=(n-i)*2; space++) {
                 System.out.print(" ");
             }
-            for (int j = i; j >= 1; j--) {
+            for (int j = i; j >=1; j--) {
                 System.out.print(j);
             }
             System.out.println();
