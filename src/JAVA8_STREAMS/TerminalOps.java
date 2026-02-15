@@ -44,6 +44,14 @@ public class TerminalOps {
         List<Integer> numbers = Arrays.asList(4,6,1,5,2);
         System.out.println(numbers.stream().map(x->x*x).sorted().toList());
 
+        // Ex.3 Summing values
+        List<Integer> integers = Arrays.asList(1,2,3,4,5);
+        System.out.println(integers.stream().reduce((x,y)->x+y).get());
+
+        // Ex.4 Counting occurences of a character
+        String sentence="Hello World";
+        System.out.println(sentence.chars().filter(x->x=='l').count());
+
 
 
     }
