@@ -4,26 +4,50 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int a[] ={5,4,9,2,8,1};
-        int n= a.length;
+        int arr[]={5,4,3,2,1};
+        arr= mergesort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
-        for (int i=n-1; i>=0;i--)       //  i=6-1 =5
+    static int[] mergesort(int[] arr)
+    {
+        if(arr.length==1)
         {
-            int didswap=0;
-            for (int j = 0; j <= i-1; j++) {  // j=0 -----> 5-1=4
-                if (a[j] >a[j+1]) {
-                    int temp=a[j+1];
-                    a[j+1]=a[j];
-                    a[j]=temp;
-                    didswap=1;
-                }
-            }
-            if (didswap == 0)        // need to break the loop so declared inside the for loop
-            {
-                break;
-            }
+            return arr;
         }
-
-        System.out.println(Arrays.toString(a));
+        int mid=arr.length/2;
+        int[] left=mergesort(Arrays.copyOfRange(arr,0,mid));
+        int[] right=mergesort(Arrays.copyOfRange(arr,mid,arr.length));
+        return merge(left,right);
+    }
+    static int[] merge(int[] first,int[] second)
+    {
+        int[] mix=new int[first.length+second.length];
+        int i=0,j=0,k=0;
+        while (i<first.length && j<second.length)
+        {
+            if(first[i]<second[j])
+            {
+                mix[k]=first[i];
+                i++;
+            }else {
+                mix[k]=second[j];
+                j++;
+            }
+            k++;
+        }
+        while (i<first.length)
+        {
+            mix[k]=first[i];
+            i++;
+            k++;
+        }
+        while (j<second.length)
+        {
+            mix[k]=second[j];
+            j++;
+            k++;
+        }
+        return mix;
     }
 }
