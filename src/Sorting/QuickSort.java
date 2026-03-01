@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSort {
 
-    static void quickSort(int[] arr,int low,int high)
+    static void quickSort(int[] arr, int low,int high)
     {
 
         if(low>=high)
@@ -37,10 +37,12 @@ public class QuickSort {
         }
         quickSort(arr,low,e);
         quickSort(arr,s,high);
+
     }
 
     public static void main(String[] args) {
         int[] arr={4,1,5,2,3};
+        int n=arr.length;
         quickSort(arr,0, arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
